@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<meta>
+    <name>Weather</name>
+    <comment>Collecting weather data...</comment>
+    <type>extensions</type>
+    <file>weather.py</file>
+    <hash>261cc99d518c24669fff883722967fdec993c01af05dd2eedd61919f875a71d7</hash>
+    <parent>f8fe00fa281aa5ba0cf8dc451a68457dd5bfbcd5809e72cc4f7722c2a6a1415e</parent>
+    <author>Sebastian Billaudelle</author>
+    <license>GPLv3</license>
+    <homepage>http://cream-project.org</homepage>
+    <mail>stein@cream-project.org</mail>
+</meta>

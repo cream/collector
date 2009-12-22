@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<meta>
+    <name>Collector</name>
+    <comment>Service collecting data...</comment>
+    <type>module</type>
+    <hash>f8fe00fa281aa5ba0cf8dc451a68457dd5bfbcd5809e72cc4f7722c2a6a1415e</hash>
+    <author>Sebastian Billaudelle</author>
+    <license>GPLv3</license>
+    <homepage>http://cream-project.org</homepage>
+    <mail>stein@cream-project.org</mail>
+</meta>

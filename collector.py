@@ -35,7 +35,7 @@ class Collector(cream.Module):
             })
 
         self.extensions = cream.extensions.ExtensionManager([os.path.join(self._base_path, 'extensions')], api)
-        self.extensions.load('261cc99d518c24669fff883722967fdec993c01af05dd2eedd61919f875a71d7')
+        self.extensions.load_by_name('Weather')
 
 
 if __name__ == '__main__':

@@ -36,9 +36,10 @@ class Weather(cream.extensions.Extension):
 
         handle = urllib.urlopen('http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query={0}'.format(location))
         data = handle.read()
+        handle.close()
         
         dom = parse_xml(data)
-        
+
         return {
             'weather': dom.getElementsByTagName('weather')[0].childNodes[0].data,
             'temperature': dom.getElementsByTagName('temp_c')[0].childNodes[0].data,
@@ -48,4 +49,4 @@ class Weather(cream.extensions.Extension):
             'pressure': dom.getElementsByTagName('pressure_mb')[0].childNodes[0].data,
             'visibility': dom.getElementsByTagName('visibility_km')[0].childNodes[0].data,
             'icon': dom.getElementsByTagName('icon')[0].childNodes[0].data
-        }
+            }

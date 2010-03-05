@@ -23,18 +23,19 @@ import cream.ipc
 import cream.extensions
 
 
-class Collector(cream.Module):
-
-    __ipc_domain__ = 'org.cream.collector'
+class Collector(cream.Module, cream.ipc.Object):
 
     def __init__(self):
 
         cream.Module.__init__(self)
+        cream.ipc.Object.__init__(self,
+            'org.cream.collector',
+            '/org/cream/collector'
+        )
 
-        api = cream.extensions.ExtensionInterface({
-            })
+        api = cream.extensions.ExtensionInterface(dict())
 
-        self.extensions = cream.extensions.ExtensionManager([os.path.join(self._base_path, 'extensions')], api)
+        self.extensions = cream.extensions.ExtensionManager([os.path.join(self.meta['path'], 'extensions')], api)
         self.extensions.load_by_name('Weather')
 
 

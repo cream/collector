@@ -19,16 +19,19 @@
 import urllib
 from xml.dom.minidom import parseString as parse_xml
 
+import cream.ipc
 import cream.extensions
 
 @cream.extensions.register
-class Weather(cream.extensions.Extension):
-
-    __ipc_domain__ = 'org.cream.collector.weather'
+class Weather(cream.extensions.Extension, cream.ipc.Object):
 
     def __init__(self, *args):
 
         cream.extensions.Extension.__init__(self, *args)
+        cream.ipc.Object.__init__(self,
+            'org.cream.collector',
+            '/org/cream/collector/weather'
+        )
 
 
     @cream.ipc.method('s', 'a{ss}')
